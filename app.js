@@ -52,9 +52,9 @@ app.use('/api/v1', router);
 
 // ******************************************* Managing Front End Routing
 
-app.use(express.static('client/build'));
-app.get('/', function (req, res) {
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-});
+// app.use(express.static('client/build'));
+// app.get('/', function (req, res) {
+//     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+// });
 
 module.exports = app;
