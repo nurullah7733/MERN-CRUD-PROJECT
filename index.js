@@ -1,6 +1,6 @@
 const app = require('./app');
 
-app.listen(4000, (err, result) => {
+app.listen(process.env.PORT || 4000, (err, result) => {
     if (err) {
         return console.log('App Running Error');
     }
