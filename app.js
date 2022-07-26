@@ -34,7 +34,7 @@ app.use(limiter);
 const onlineDatabase =
     'mongodb+srv://nur:nur@cluster0.y610b.mongodb.net/CRUD?retryWrites=true&w=majority';
 const offline = 'mongodb://127.0.0.1:27017/crud';
-const option = { user: 'nur', pass: 'nur' }; //for atsal connect user: nur password: nur
+const option = { user: '', pass: '' }; //for atsal connect user: nur password: nur
 mongoose.connect(
     onlineDatabase,
     option,
