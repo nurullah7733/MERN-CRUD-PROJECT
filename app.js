@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
@@ -31,12 +32,11 @@ const limiter = rateLimit({ windowMs: 15 * 60 * 100, max: 3000 });
 app.use(limiter);
 
 // Database
-const onlineDatabase =
-    'mongodb+srv://nur:nur@cluster0.y610b.mongodb.net/CRUD?retryWrites=true&w=majority';
+
 const offline = 'mongodb://127.0.0.1:27017/crud';
 const option = { user: '', pass: '' }; //for atsal connect user: nur password: nur
 mongoose.connect(
-    onlineDatabase,
+    process.env.DATABASE,
     option,
 
     (err, success) => {
